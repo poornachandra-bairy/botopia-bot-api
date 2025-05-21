@@ -4,7 +4,6 @@ WORKDIR /app
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
-    mongodb \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies
@@ -17,5 +16,5 @@ COPY . .
 # Expose port
 EXPOSE 8000
 
-# Run MongoDB and the FastAPI app
-CMD ["bash", "-c", "mongod --fork --logpath /var/log/mongodb.log && uvicorn main:app --host 0.0.0.0 --port 8000"]
+# Run the FastAPI app
+CMD ["python3", "-m", "uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "$PORT"]
