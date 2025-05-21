@@ -1,8 +1,8 @@
 from fastapi import APIRouter
-from bot_dto import CreateBotDTO
-from bot_service import BotService
-from mongo_config import MongoDBConfig
-from bot_repository import BotRepository
+from src.bot_dto import CreateBotDTO
+from src.bot_service import BotService
+from src.mongo_config import MongoDBConfig
+from src.bot_repository import BotRepository
 
 router = APIRouter()
 

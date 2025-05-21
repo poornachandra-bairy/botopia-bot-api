@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from bot_controller import router as bot_router
+from src.bot_controller import router as bot_router
 
 app = FastAPI()
 

@@ -5,10 +5,12 @@ import time
 import logging
 from retrying import retry
 import traceback
+from config import config_loader
 
 class MongoDBConfig:
     def __init__(self):
-        self.uri = os.getenv("MONGODB_URI", "mongodb://localhost:27017/botopia_db")
+        self.config_loader = config_loader.ConfigLoader()
+        self.uri = self.config_loader.get_mongodb_uri()
         self._setup_logging()
         self._connect_to_db()
         self._setup_logging()

@@ -1,5 +1,5 @@
-from bot_dto import CreateBotDTO, GetBotDTO
-from mongo_config import MongoDBConfig
+from src.bot_dto import CreateBotDTO, GetBotDTO
+from src.mongo_config import MongoDBConfig
 from typing import List
 
 class BotRepository:

@@ -1,5 +1,5 @@
-from bot_dto import CreateBotDTO, GetBotDTO
-from bot_repository import BotRepository
+from src.bot_dto import CreateBotDTO, GetBotDTO
+from src.bot_repository import BotRepository
 from typing import List
 
 
